@@ -1,0 +1,14 @@
+.poll-form {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+}
+.form-button {
+  margin: 10px 10px 5px 5px;
+  text-align: center;
+}
+
+button {
+  margin: 10px;
+}

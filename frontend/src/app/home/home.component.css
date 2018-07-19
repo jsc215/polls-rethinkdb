@@ -1,0 +1,25 @@
+mat-nav-list {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+}
+
+/* mat-card {
+  margin: 50px auto;
+  text-align: center;
+  width: 80%;
+  padding: 0px 0px 2px 0px;
+} */
+
+.item {
+  margin-top: 5px;
+  box-shadow: 0px 5px 20px -3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  /* position: relative; */
+}

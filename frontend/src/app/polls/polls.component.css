@@ -1,0 +1,15 @@
+mat-radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-radio-button {
+  margin-bottom: 15px;
+}
+
+mat-card {
+  /* text-align: center; */
+  margin-top: 50px;
+  width: 50%;
+  margin: 50px auto;
+}

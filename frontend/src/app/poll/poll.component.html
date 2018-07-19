@@ -1,0 +1,12 @@
+
+      <div *ngIf="poll | async as poll">
+        <mat-card >
+          <mat-card-content>
+            <h2>{{poll.question}}</h2>
+            <mat-radio-group>
+              <mat-radio-button *ngFor="let option of poll.polls" [value]="option.option"> {{ option.option }} </mat-radio-button>
+            </mat-radio-group>
+            <br> 
+          </mat-card-content>
+          </mat-card>
+        </div>

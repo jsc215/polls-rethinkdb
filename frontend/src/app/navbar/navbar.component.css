@@ -1,0 +1,15 @@
+mat-toolbar {
+  z-index: 10;
+}
+
+mat-icon {
+  margin-right: 10px;
+}
+button {
+  margin: 5px;
+}
+
+.button-row {
+  margin: 10px 10px 5px 5px;
+  text-align: center;
+}

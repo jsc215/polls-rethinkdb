@@ -1,0 +1,42 @@
+2018-07-17T21:37:44.593782000 0.012019s notice: Recursively removing directory /Users/comertoast/goji_learning_materials/rethink_polling_app/rethinkdb_data/tmp
+2018-07-17T21:37:44.595275000 0.013517s notice: Initializing directory /Users/comertoast/goji_learning_materials/rethink_polling_app/rethinkdb_data
+2018-07-17T21:37:44.595367000 0.013604s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/comertoast/goji_learning_materials/rethink_polling_app/rethinkdb_data' did not already exist or is empty.)
+2018-07-17T21:37:44.595399000 0.013636s notice: Running rethinkdb 2.3.6 (CLANG 8.1.0 (clang-802.0.42))...
+2018-07-17T21:37:44.610532000 0.028770s notice: Running on Darwin 17.7.0 x86_64
+2018-07-17T21:37:44.610591000 0.028828s notice: Loading data from directory /Users/comertoast/goji_learning_materials/rethink_polling_app/rethinkdb_data
+2018-07-17T21:37:44.682002000 0.100240s info: Automatically using cache size of 3215 MB
+2018-07-17T21:37:44.682612000 0.100849s notice: Listening for intracluster connections on port 29015
+2018-07-17T21:37:44.684327000 0.102564s notice: Listening for client driver connections on port 28015
+2018-07-17T21:37:44.684456000 0.102693s notice: Listening for administrative HTTP connections on port 8080
+2018-07-17T21:37:44.684457000 0.102694s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2018-07-17T21:37:44.684462000 0.102699s notice: Listening on driver addresses: 127.0.0.1, ::1
+2018-07-17T21:37:44.684465000 0.102702s notice: Listening on http addresses: 127.0.0.1, ::1
+2018-07-17T21:37:44.684472000 0.102708s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-07-17T21:37:44.684478000 0.102715s notice: Server ready, "MacBook_Pro_fios_router_home_y98" c977a0eb-d196-4710-9b50-ae4d8bc09f37
+2018-07-17T21:38:36.251670000 51.670061s info: Table 9a59b1b2-f8bf-429c-b79c-0c130248c5d7: Starting a new Raft election for term 1.
+2018-07-17T21:38:36.251983000 51.670373s info: Table 9a59b1b2-f8bf-429c-b79c-0c130248c5d7: Added replica on this server.
+2018-07-17T21:38:36.262154000 51.680545s info: Table 9a59b1b2-f8bf-429c-b79c-0c130248c5d7: This server is Raft leader for term 1. Latest log index is 0.
+2018-07-18T01:38:45.364101000 14460.807443s notice: Server got SIGINT from pid 28296, uid 501; shutting down...
+2018-07-18T01:38:45.364366000 14460.807708s notice: Shutting down client connections...
+2018-07-18T01:38:45.364508000 14460.807850s notice: All client connections closed.
+2018-07-18T01:38:45.364517000 14460.807859s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-07-18T01:38:45.367012000 14460.810354s notice: Storage engine shut down.
+2018-07-18T01:38:46.456066000 0.010261s notice: Running rethinkdb 2.3.6 (CLANG 8.1.0 (clang-802.0.42))...
+2018-07-18T01:38:46.473578000 0.027769s notice: Running on Darwin 17.7.0 x86_64
+2018-07-18T01:38:46.473645000 0.027836s notice: Loading data from directory /Users/comertoast/goji_learning_materials/rethink_polling_app/rethinkdb_data
+2018-07-18T01:38:46.492727000 0.046917s info: Automatically using cache size of 1737 MB
+2018-07-18T01:38:46.493250000 0.047440s notice: Listening for intracluster connections on port 29015
+2018-07-18T01:38:46.505487000 0.059678s notice: Listening for client driver connections on port 28015
+2018-07-18T01:38:46.505628000 0.059818s notice: Listening for administrative HTTP connections on port 8080
+2018-07-18T01:38:46.505629000 0.059819s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2018-07-18T01:38:46.505631000 0.059821s notice: Listening on driver addresses: 127.0.0.1, ::1
+2018-07-18T01:38:46.505633000 0.059823s notice: Listening on http addresses: 127.0.0.1, ::1
+2018-07-18T01:38:46.505678000 0.059868s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2018-07-18T01:38:46.505680000 0.059870s notice: Server ready, "MacBook_Pro_fios_router_home_y98" c977a0eb-d196-4710-9b50-ae4d8bc09f37
+2018-07-18T01:38:48.095467000 1.649659s info: Table 9a59b1b2-f8bf-429c-b79c-0c130248c5d7: Starting a new Raft election for term 2.
+2018-07-18T01:38:48.116270000 1.670462s info: Table 9a59b1b2-f8bf-429c-b79c-0c130248c5d7: This server is Raft leader for term 2. Latest log index is 3.
+2018-07-18T02:17:54.193524000 2347.755185s notice: Server got SIGINT from pid 28296, uid 501; shutting down...
+2018-07-18T02:17:54.193727000 2347.755387s notice: Shutting down client connections...
+2018-07-18T02:17:54.193874000 2347.755533s notice: All client connections closed.
+2018-07-18T02:17:54.193881000 2347.755540s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2018-07-18T02:17:54.196567000 2347.758227s notice: Storage engine shut down.
