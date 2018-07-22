@@ -1,5 +1,5 @@
 'use strict';
-const rethinkdb = require('rethinkdb');
+const r = require('rethinkdb');
 var db = require('./db');
 const async = require('async');
 
@@ -17,12 +17,12 @@ class polls {
           });
         },
         (connection, callback) => {
-          rethinkdb
-            .table('poll')
+          r.table('poll')
             .insert({
-              "question": pollData.question,
-                "polls": pollData.polls
-            }).run(connection, (err, res) => {
+              question: pollData.question,
+              polls: pollData.polls
+            })
+            .run(connection, (err, res) => {
               connection.close();
               if (err) {
                 return callback(true, 'Unable to add new poll');
@@ -50,8 +50,7 @@ class polls {
           });
         },
         (connection, callback) => {
-          rethinkdb
-            .table('poll')
+          r.table('poll')
             .get(pollData.id)
             .run(connection, (err, res) => {
               if (err) {
@@ -63,8 +62,7 @@ class polls {
                   break;
                 }
               }
-              rethinkdb
-                .table('poll')
+              r.table('poll')
                 .get(pollData.id)
                 .update(res)
                 .run(connection, (error, result) => {
@@ -96,7 +94,7 @@ class polls {
           });
         },
         (connection, callback) => {
-          rethinkdb.table('poll').run(connection, (error, cursor) => {
+          r.table('poll').run(connection, (error, cursor) => {
             connection.close();
             if (error) {
               return callback(true, 'Unable to fetch all polls');

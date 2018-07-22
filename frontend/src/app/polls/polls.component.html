@@ -1,5 +1,4 @@
-
-<mat-card *ngFor="let poll of polls">
+<!-- <mat-card *ngFor="let poll of polls">
   <mat-card-content>
     <h2>{{poll.question}}</h2>
     <mat-radio-group>
@@ -7,5 +6,19 @@
     </mat-radio-group>
     <br>
   </mat-card-content>
-</mat-card>
-
+</mat-card> -->
+<div *ngFor="let poll of polls">
+  <mat-card class="mat-elevation-z8">
+    <mat-card-title>
+      {{poll.question}}
+    </mat-card-title>
+    <mat-card-content>
+      <span *ngFor="let option of poll.polls">
+        <h4>{{option.option}}: {{option.vote}}</h4>
+      </span>
+      <!-- <p>
+            {{ option.option }} {{option.vote}}
+          </p> -->
+    </mat-card-content>
+  </mat-card>
+</div>

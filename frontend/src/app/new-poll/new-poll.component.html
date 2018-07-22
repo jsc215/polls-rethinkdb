@@ -1,4 +1,4 @@
-<form>
+<form (ngSubmit)="onSubmit()" #pollForm="ngForm">
   <mat-card class='poll-form'>
     <mat-form-field>
       <input 
@@ -15,8 +15,8 @@
           matInput type="text" 
           placeholder="Option 1" 
           id="Option1" 
-          [(ngModel)]="option" 
-          name="Option">
+          [(ngModel)]="option"
+          name="option">
         </mat-form-field>
 
       <mat-form-field>
@@ -25,7 +25,7 @@
           placeholder="Option 2" 
           id="Option2" 
           [(ngModel)]="option2" 
-          name="Option2">
+          name="option2">
       </mat-form-field>
       <mat-form-field>
         <input 
@@ -33,12 +33,12 @@
           placeholder="Option 3" 
           id="Option3" 
           [(ngModel)]="option3" 
-          name="Option3">
+          name="option3">
       </mat-form-field>
 
       </mat-card>
       <div class='form-button'>
-        <button type="submit" mat-raised-button color="primary"(click)="onSubmit()">Submit Poll</button>
+        <button type="submit" mat-raised-button color="primary">Submit Poll</button>
       </div> 
     </form>
                   <!-- <mat-form-field>

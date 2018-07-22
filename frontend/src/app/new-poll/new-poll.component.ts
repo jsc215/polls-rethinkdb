@@ -13,6 +13,7 @@ export class NewPollComponent  {
   option = '';
   option2 = '';
   option3 = '';
+  vote: number;
 
   constructor(
     private dataService: DataService,
@@ -24,13 +25,15 @@ export class NewPollComponent  {
       question: this.question,
       polls: [
         {
-          option: this.option
+          option: this.option, vote: 0
         },
         {
-          option: this.option2
+          option: this.option2,
+          vote: 0
         },
         {
-          option: this.option3
+          option: this.option3,
+          vote: 0
         }
       ]
     };

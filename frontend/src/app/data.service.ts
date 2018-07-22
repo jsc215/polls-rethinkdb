@@ -7,12 +7,14 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json'})
 };
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+   }
 
   getAllPolls() {
     return this.http.get('/api/polls');
@@ -25,6 +27,8 @@ export class DataService {
   addPoll(newPoll) {
     return this.http.post('/api/polls', newPoll, httpOptions);
   }
+
+  updatePoll(updatedPoll) {
+    return this.http.put('api/polls', updatedPoll, httpOptions);
+  }
 }
-
-

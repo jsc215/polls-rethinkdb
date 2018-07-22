@@ -1,11 +1,11 @@
+<h1>Click a Poll to Vote!</h1>
 <mat-nav-list *ngFor="let poll of polls">
   <a routerLink="/poll/{{poll.id}}">
-    <div class="item">
-      <mat-list-item>
+    <span class="item">
+      <mat-list-item >
         <h4>{{ poll.question }}</h4>
-        <!-- <p>id: {{poll.id}} </p> -->
       </mat-list-item>
-    </div>
-    <!-- <mat-divider></mat-divider> -->
+    </span>
+    <mat-divider></mat-divider>
   </a>
 </mat-nav-list>

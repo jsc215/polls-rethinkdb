@@ -2,8 +2,16 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const http = require('http').Server(app);
+const io = require('socket.io')(http);
 const db = require('./models/db');
 const path = require('path');
+
+let feed;
+// On connection to the socket, just invoking the function.
+io.on('connection', (socket) => {
+  console.log(socket);
+  feed = require('./models/feeds')(socket);
+});
 
 /**
   Adding the controllers.

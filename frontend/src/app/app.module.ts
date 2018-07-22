@@ -17,7 +17,7 @@ import { PollComponent } from './poll/poll.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'new-poll', component: NewPollComponent },
-  { path: 'polls', component: PollsComponent },
+  {path: 'polls', component: PollsComponent},
   { path: 'poll/:id', component: PollComponent}
 ];
 @NgModule({

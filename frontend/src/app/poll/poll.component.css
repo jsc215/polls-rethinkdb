@@ -5,6 +5,7 @@ mat-radio-group {
 
 mat-radio-button {
   margin-bottom: 15px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 mat-card {
@@ -12,4 +13,5 @@ mat-card {
   margin-top: 50px;
   width: 50%;
   margin: 50px auto;
+  font-family: 'Open Sans', sans-serif;
 }
