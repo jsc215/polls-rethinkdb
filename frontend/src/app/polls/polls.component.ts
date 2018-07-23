@@ -8,7 +8,6 @@ import { DataService } from '../data.service';
 })
 export class PollsComponent implements OnInit {
   polls;
-
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
@@ -18,7 +17,6 @@ export class PollsComponent implements OnInit {
   getPolls() {
     this.dataService.getAllPolls().subscribe((poll) => {
       const polls = Array.from((this.polls = poll['data'].map((mapPolls) => mapPolls)));
-      // console.log(this.polls[0].polls[0]['option']);
     });
   }
 }

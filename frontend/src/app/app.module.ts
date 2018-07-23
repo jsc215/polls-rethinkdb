@@ -1,4 +1,3 @@
-import { DataService } from './data.service';
 import { PollsComponent } from './polls/polls.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MaterialModule } from './shared/material.module';
@@ -17,11 +16,19 @@ import { PollComponent } from './poll/poll.component';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'new-poll', component: NewPollComponent },
-  {path: 'polls', component: PollsComponent},
-  { path: 'poll/:id', component: PollComponent}
+  { path: 'polls', component: PollsComponent },
+  { path: 'poll/:id', component: PollComponent }
 ];
+
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, PollsComponent, NewPollComponent, HomeComponent, PollComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    PollsComponent,
+    NewPollComponent,
+    HomeComponent,
+    PollComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -32,7 +39,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [DataService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

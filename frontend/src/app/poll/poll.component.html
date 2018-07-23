@@ -1,23 +1,12 @@
-
-  <div *ngIf="poll | async as poll">
-    <mat-card>
-      <mat-card-content>
-        <h2>{{poll.question}}</h2>
-        <mat-radio-group 
-         
-        [(ngModel)]="poll.option"
-        >
-        <mat-radio-button  
-        *ngFor="let poll of poll.polls; let i = index"
-        (click)="onVote(poll)"
-        [value]="i"
-        >
-       {{ poll.option }}  
-       <!-- index:{{i}} -->
-       
-      </mat-radio-button >
-    </mat-radio-group>
-  </mat-card-content>
-</mat-card> 
-
+<div *ngIf="poll | async as poll">
+  <mat-card>
+    <mat-card-content>
+      <h2>{{poll.question}}</h2>
+      <mat-radio-group [(ngModel)]="poll.option">
+        <mat-radio-button *ngFor="let poll of poll.polls; let i = index" (click)="onVote(poll)" [value]="i"> {{ poll.option }}
+          <!-- index:{{i}} -->
+        </mat-radio-button>
+      </mat-radio-group>
+    </mat-card-content>
+  </mat-card>
 </div>

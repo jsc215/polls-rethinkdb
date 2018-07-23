@@ -8,24 +8,22 @@ import { Router } from '@angular/router';
   templateUrl: './new-poll.component.html',
   styleUrls: ['./new-poll.component.css']
 })
-export class NewPollComponent  {
+export class NewPollComponent {
   question = '';
   option = '';
   option2 = '';
   option3 = '';
   vote: number;
 
-  constructor(
-    private dataService: DataService,
-    private router: Router,
-  ) {}
+  constructor(private dataService: DataService, private router: Router) {}
 
   onSubmit(form: NgForm) {
     const newPoll = {
       question: this.question,
       polls: [
         {
-          option: this.option, vote: 0
+          option: this.option,
+          vote: 0
         },
         {
           option: this.option2,

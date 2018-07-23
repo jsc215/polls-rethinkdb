@@ -3,6 +3,23 @@ const r = require('rethinkdb');
 // const async = require('async');
 
 class db {
+  async setupDb() {
+    console.log('setting up db');
+    try {
+      let connection = await r.connect({
+        host: 'localhost',
+        port: 28015
+      });
+      await r.dbCreate('polls').run(connection);
+      await r
+        .db('polls')
+        .tableCreate('poll')
+        .run(connection);
+    } catch (err) {
+      console.log(`Database error ${err}`);
+    }
+  }
+
   // setupDb() {
   //   // let self = this;
   //   async.waterfall([
@@ -55,26 +72,9 @@ class db {
   //   );
   // }
 
- 
-
- 
-  async setupDb() {
-    console.log('setting up db')
-    try {
-      let connection = await r.connect({
-        host: 'localhost',
-        port: 28015,
-      });
-      await r.dbCreate('polls').run(connection);
-      await r.db('polls').tableCreate('poll').run(connection);
-    } catch (err) {
-      console.log(`Database error ${err}`);
-    }
-  }
-  // }
-
   connectToDb(callback) {
-    r.connect({ host: 'localhost', port: 28015, db: 'polls'},
+    r.connect(
+      { host: 'localhost', port: 28015, db: 'polls' },
       (err, connection) => {
         callback(err, connection);
       }

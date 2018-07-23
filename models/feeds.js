@@ -3,24 +3,26 @@ const db = require('./db');
 const pollObject = new db();
 
 module.exports = function(socket) {
-  pollObject.connectToDb(function(err, connection) {
+  pollObject.connectToDb((err, connection) => {
     if (err) {
       return callback(true, 'Error connecting to database');
     }
     // Look over this line carefully.
     // we are invoking changes() function on poll table.
     // On every change it will give us data.
-    r.table('poll')
-      .changes()
-      .run(connection, function(err, cursor) {
+    r.table('poll').changes().run(connection, (err, cursor) => {
         if (err) {
           console.log(err);
         }
         // We are scrolling over the cursor data and broadcasting the changes using socket.
-        cursor.each(function(err, row) {
+        cursor.each((err, row) => {
           console.log(JSON.stringify(row));
+
           if (Object.keys(row).length > 0) {
-            socket.broadcast.emit('changeFeed', { id: row.new_val.id, polls: row.new_val.polls });
+            socket.broadcast.emit('changeFeed', { 
+              "id": row.new_val.id, 
+              "polls": row.new_val.polls 
+            });
           }
         });
       });

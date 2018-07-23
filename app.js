@@ -5,12 +5,12 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const db = require('./models/db');
 const path = require('path');
+const feed = require('./models/feeds');
 
-let feed;
 // On connection to the socket, just invoking the function.
 io.on('connection', (socket) => {
-  console.log(socket);
-  feed = require('./models/feeds')(socket);
+  feed(socket);
+  console.log('socket connected');
 });
 
 /**

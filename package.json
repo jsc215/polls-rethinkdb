@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Building real time polling app with RethinkDB and Node.js",
   "main": "app.js",
+  "scripts":{
+    "start": "nodemon app.js"
+  },
   "dependencies": {
     "async": "^2.6.1",
     "body-parser": "^1.18.3",
