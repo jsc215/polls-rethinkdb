@@ -1,3 +1,4 @@
+import { SocketService } from './../socket.service';
 import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
@@ -15,7 +16,8 @@ export class PollComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private dataService: DataService
+    private dataService: DataService,
+    private socketService: SocketService
   ) {}
 
   ngOnInit() {
@@ -30,6 +32,8 @@ export class PollComponent implements OnInit {
       id: this.route.params['value']['id'],
       option: poll.option
     };
-    this.dataService.updatePoll(updatedPoll).subscribe();
+    this.dataService.updatePoll(updatedPoll).subscribe(vote => {
+      this.socketService.sendVote(vote);
+    });
   }
 }

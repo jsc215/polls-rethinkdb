@@ -11,6 +11,10 @@ const feed = require('./models/feeds');
 io.on('connection', (socket) => {
   feed(socket);
   console.log('socket connected');
+
+  socket.on('disconnect', () => {
+    console.log('socket disconnected');
+  })
 });
 
 /**
