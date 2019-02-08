@@ -5,7 +5,8 @@ const async = require('async');
 
 class polls {
   addNewPolls(pollData, callback) {
-    async.waterfall([
+    async.waterfall(
+      [
         (callback) => {
           var dbModel = new db();
           dbModel.connectToDb((err, connection) => {
@@ -32,7 +33,8 @@ class polls {
       ],
       (err, data) => {
         callback(err === null ? false : true, data);
-      });
+      }
+    );
   }
 
   votePollOption(pollData, callback) {

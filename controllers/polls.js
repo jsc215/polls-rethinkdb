@@ -3,16 +3,17 @@ var router = express.Router();
 // require model file.
 var pollModel = require('../models/polls');
 
-router.route('/')
+router
+  .route('/')
   .get((req, res) => {
     // Code to fetch the polls.
     var pollObject = new pollModel();
     // Calling our model function.
     pollObject.getAllPolls((err, pollResponse) => {
       if (err) {
-        return res.json({ "responseCode": 1, "responseDesc": pollResponse });
+        return res.json({ responseCode: 1, responseDesc: pollResponse });
       }
-      res.json({ "responseCode": 0, "responseDesc": "Success", "data": pollResponse });
+      res.json({ responseCode: 0, responseDesc: 'Success', data: pollResponse });
     });
   })
   .post((req, res) => {
@@ -22,9 +23,9 @@ router.route('/')
     // We nee to validate our payload here.
     pollObject.addNewPolls(req.body, (err, pollResponse) => {
       if (err) {
-        return res.json({ "responseCode": 1, "responseDesc": pollResponse });
+        return res.json({ responseCode: 1, responseDesc: pollResponse });
       }
-      res.json({ "responseCode": 0, "responseDesc": "Success", "data": pollResponse });
+      res.json({ responseCode: 0, responseDesc: 'Success', data: pollResponse });
     });
   })
   .put((req, res) => {
@@ -34,9 +35,9 @@ router.route('/')
     // We need to validate our payload here.
     pollObject.votePollOption(req.body, (err, pollResponse) => {
       if (err) {
-        return res.json({ "responseCode": 1, "responseDesc": pollResponse });
+        return res.json({ responseCode: 1, responseDesc: pollResponse });
       }
-      res.json({ "responseCode": 0, "responseDesc": "Success", "data": pollResponse });
+      res.json({ responseCode: 0, responseDesc: 'Success', data: pollResponse });
     });
   });
 
